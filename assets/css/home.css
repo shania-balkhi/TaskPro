@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(to right, rgba(0, 85, 255, 0.671) , rgb(21, 21, 18));
+}
+
+#page-heading{
+    text-align: center;
+    margin-top: 25px;
+    color: grey;
+}
+
+body{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    /* width: 200%; */
+    /* border: 2px solid black; */
+    margin-right: 380px;
+    width: 100%;
+    padding: 0;
+}
+
+ul li{
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgba(0, 85, 255, 0.671) , rgb(21, 21, 18));
+    /* background-color: #648FFF; */
+    padding: 5px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+ul li p{
+    width: 50%;
+    /* border: 2px solid aqua; */
+}
+
+.delete-button{
+    padding: 22px;
+    padding-left: 0;
+    padding-right: 0;;
+    margin-right: 20px;
+    /* border: 2px solid aqua; */
+}
+
+.delete-button i{
+    /* background-color: red; */
+    color: red;
+}
+
+ul li:hover{
+    background-color: #787678;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    width: 43%;
+    padding: 0;
+}
+
+form input, button{
+    border: none;
+    border-bottom: 2px solid grey;
+    margin: 2px;
+    /* font-size: 1.3rem; */
+    padding: 10px;
+    /* width: 50%; */
+}
+
+form input{
+    width: 39%;
+    padding-right: 2px;
+}
+
+button{
+    background-color: #787678;
+    color: white;
+}

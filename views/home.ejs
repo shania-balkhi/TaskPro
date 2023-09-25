@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <script  src="https://kit.fontawesome.com/b3348ae33f.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1 id="page-heading">
+        <!-- <i class="fas fa-address-book"></i> -->
+        <i class="fa-solid fa-pen-to-square"></i>
+        TaskPro:
+        <h2 style="color: aqua;">Your Own Productivity App</h2>
+    </h1>
+
+    <div>
+        <ul>
+            <% for (let i of contact_list) { %>
+                <li>
+                    <p> <%= i.name %> </p>
+                    <p> <%= i.phone %> </p>
+
+                    <div class="delete-button">
+                        <a href="/delete-contact/?id=<%= i._id %>">
+                            <i class="fas fa-remove"></i>
+                        </a>
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+    </div>
+
+    <!-- action signifies where do you want to send the data -->
+    <!-- <h2 style="align-items: center; color: rgb(121, 207, 207);"><span style="margin-right: 12rem;">Tasks</span><span style="margin-right: 7rem;"">Deadline</span></h2> -->
+    <h2 id="page-heading">Tasks & Deadlines</h2>
+    <form action="/create-contact" method="POST">
+        <input type="text" name="name" placeholder="Enter Task" required>
+        <input type="text" name="phone" placeholder="Enter Deadline" required>
+
+        <button type="submit">Add Item</button>
+
+    </form>
+
+    <script type="text/javascript" src="/js/home.js"></script>
+</body>
+</html>
